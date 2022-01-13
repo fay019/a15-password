@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-danger">Password Generator</h1>
+    <div class="blocks">
+        <!-- CHECKBOXES WHICH WILL WHAT OUR PASSWORD WILL CONTAIN -->
+        <div class="check-form">
+            <input type="number" name="myLength" id="myLength" value="8" min="8" max="40"/>
+            <label for="myLength">Length (Min:8 / Max:40)</label>
+            <div id="span-help">With more than 15 characters, it's stronger</div>
+        </div>
+        <div class="check-form">
+            <input disabled="disabled" type="checkbox" name="lowercase" id="lowercase" checked/>
+            <label for="lowercase">Lowercase</label>
+            <div id="div-help">Selected by Default</div>
+        </div>
+        <div class="check-form">
+            <input type="checkbox" name="uppercase" id="uppercase"/>
+            <label for="uppercase">UpperCase</label>
+        </div>
+        <div class="check-form">
+            <input type="checkbox" name="numbers" id="numbers"/>
+            <label for="numbers">Numbers</label>
+        </div>
+        <div class="check-form">
+            <input type="checkbox" name="symbols" id="symbols"/>
+            <label for="symbols">Symbols </label>
+            <div id="div-symbols">(e.g.,<span id="span-symbols"></span> )</div>
+        </div>
+        <!--<div class="check-form">
+            <input type="checkbox" name="spaces" id="spaces" />
+            <label for="spaces">Spaces</label>
+        </div>-->
+    </div>
+    <!-- BUTTON TO GENERATE PASSWORD -->
+    <button id="generate" class="btn-primary">Generate</button>
+    <div class="generate-form">
+        <div class="flex-row">
+            <span class="uppercase">Password</span>
+            <!--    COPY TO CLIPBOARD     -->
+            <span class="uppercase" id="copy">Copy</span>
+        </div>
+        <div class="password">
+            <!-- HERE WILL BE OUR PASSWORD -->
+            <label for="input-password"></label>
+            <input class="password-generator" id="input-password" type="text" readonly>
+            <div class="bar">
+                <div class="bar-text"></div>
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+                <div class="bar-4"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "a15-password",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "mon": "nodemon server",
+    "start": "node server"
+  },
+  "keywords": [],
+  "author": "Fay",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

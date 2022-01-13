@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-danger">Password Checker</h1>
+    <div class="generate-form">
+        <div class="flex-row">
+            <span class="uppercase">Password</span>
+            <!--    COPY TO CLIPBOARD     -->
+            <span class="uppercase" id="copy">Copy</span>
+        </div>
+        <div class="password">
+            <!-- HERE WILL BE PASSWORD INPUT -->
+            <label for="input-password"></label>
+            <input class="password-checker" id="input-password" type="text" placeholder="put your password here">
+            <div class="bar">
+                <div class="bar-text"></div>
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+                <div class="bar-4"></div>
+            </div>
+            <button id="btn-check" class="btn-primary">check</button>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
