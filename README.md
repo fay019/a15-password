@@ -1,6 +1,8 @@
-#Passwords
-## API Documentation 
->  password generator and strength checker
+# Passwords
+
+## API Documentation
+
+> password generator and strength checker
 
 
 ![f03c15](https://img.shields.io/badge/Code-JQuery-informational?style=flat&logo=jquery&color=61DAFB)
@@ -16,28 +18,26 @@
 ![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&color=181717)
 ![](https://img.shields.io/badge/Tools-GitLab-informational?style=flat&logo=GitLab&color=181717)
 
-
 ## password generator APi
 
 - Link " URL: 'http://localhost:3000/api/generateur/{length}/{options}' "
 
-  >>- Length:  must be numeric, and it indicates the length of the password (min: 8, max: 40).
+  > > - Length:  must be numeric, and it indicates the length of the password (min: 8, max: 40).
   >>- Options: must be a string (which contains at least one of the letters indicated below), the order does not matter .
-    >- L => Lowercase. "abcdefghijklmnopqrstuvwxyzäöü"
-    >- U => Uppercase. "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ"
-    >- N => Numbers. "0123456789"
-    >- S => Symbols. "$%^&(){}[]=+-/_.,;><?!'\"@ß"
+  >- L => Lowercase. "abcdefghijklmnopqrstuvwxyzäöü"
+  >- U => Uppercase. "ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ"
+  >- N => Numbers. "0123456789"
+  >- S => Symbols. "$%^&(){}[]=+-/_.,;><?!'\"@ß"
 
-- RETURN: an array and the 1st value is a string and that is the generated password and the 2nd value is a number that tells us the strength of the generated password.
-  >- string: the generated password.
+- RETURN: an array and the 1st value is a string and that is the generated password and the 2nd value is a number that
+  tells us the strength of the generated password.
+  > - string: the generated password.
   >- number: 1 => Very Weak, 2 => Weak, 3 => Medium, 4 => Strong, 5 => Very Strong.
-
 
 ## password checker APi
 
-
 - Link "URL: 'http://localhost:3000/api/checker/{password}' "
-  >- Password: string whatever you want
-  
+  > - Password: string whatever you want
+
 - RETURN: a number that tells us the strength of the generated password.
-  >- number: 1 => Very Weak, 2 => Weak, 3 => Medium, 4 => Strong, 5 => Very Strong.
+  > - number: 1 => Very Weak, 2 => Weak, 3 => Medium, 4 => Strong, 5 => Very Strong.

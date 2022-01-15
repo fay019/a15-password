@@ -1,14 +1,14 @@
 {
   "name": "a15-password",
   "version": "1.0.0",
-  "description": "",
+  "description": "Password generator and password strength checker",
   "main": "server.js",
   "scripts": {
     "mon": "nodemon server",
     "start": "node server"
   },
   "keywords": [],
-  "author": "Fay",
+  "author": "Faycal",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2"

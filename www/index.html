@@ -4,62 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Home</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100vh;
-            height: 100vh;
-            background-color: #2a2a2a;
-        }
-        .btn-container {
-            display: flex;
-            flex-direction: row;
-            top: 30%;
-        }
-        .btn {
-            font-size: 0.8em;
-            text-align: center;
-            margin: 20px 0 0 20px;
-            border-radius: 20px;
-            height: 1.5em;
-            width: 88px;
-            border: 0;
-            box-shadow: 1px 1px 5px rgba(66,66,66,.75);
-            cursor: pointer;
-        }
-        .btn:hover {
-             border: 0 ;
-             background-color: #60a2f7;
-             box-shadow: 1px 1px 5px 3px rgba(109, 173, 248, 0.71);
-         }
-        .btn::after {
-            position: absolute;
-            margin-top: 50px;
-            color: black;
-            font-size:1.5em;
-            font-weight:bold;
-            background-color: #2f80ed;
-        }
-        .btn:first-child::after {
-            content:'';
-        }
-        .btn:nth-child(2):after {
-            content:'';
-        }
-        .btn:last-child::after {
-            content:'';
-        }
+
+
     </style>
 </head>
 <body>
 <div class="container">
+    <h1 class="page-title">Password</h1>
     <div class="btn-container">
         <button class="btn">Generator</button>
         <button class="btn">Checker</button>
         <button class="btn">Register</button>
     </div>
+</div>
+<div class="readme">
+    <iframe></iframe>
 </div>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/script.js"></script>
