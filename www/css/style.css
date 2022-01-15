@@ -9,6 +9,7 @@ body {
     background: linear-gradient(#141e30, #243b55);
     height: 100vh;
 }
+
 .page-title {
     color: white;
     font-weight: bold;
@@ -357,15 +358,16 @@ body {
 }
 
 .btn {
-    font-size: 0.8em;
+    font-size: 1em;
     text-align: center;
     margin: 20px 0 0 20px;
     border-radius: 20px;
-    height: 1.5em;
-    width: 88px;
+    height: 2.5em;
+    width: 100px;
     border: 0;
     box-shadow: 1px 1px 5px rgba(66, 66, 66, .75);
     cursor: pointer;
+    background-color: rgba(188, 222, 255, 0.76);
 }
 
 .btn:hover {
@@ -381,4 +383,25 @@ body {
     font-size: 1.5em;
     font-weight: bold;
     background-color: #2f80ed;
+}
+
+.readme {
+    color: white;
+    font-size: 1.1em;
+    margin: 65px 0 0 30px;
+    width: 90%;
+    border: 1px solid #2f80ed;
+    border-radius: 3px;
+    padding-inline: 20px;
+}
+
+.readme h1, h2 {
+    text-align: center;
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+p a {
+    text-decoration: none;
+    color: white;
 }

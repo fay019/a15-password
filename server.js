@@ -14,14 +14,18 @@ app.use( express.urlencoded( { extended:true } ) ) // for parsing application/x-
 app.get( [
     '/api/generator/:myLength/:options',
     '/api/generator/:myLength',
-    '/api/generator'
+    '/api/generator/'
 ], ( req, res ) => {
+    console.log( req.params.myLength * 1 )
     if ( !req.params.myLength || !req.params.options ) {
         res.status( 400 ).end( 'Bad request, need some params, length and options' );
+    } else if ( isNaN( req.params.myLength ) ) {
+        res.status( 400 ).end( 'Bad request, length must be a number' );
+    } else {
+        let myPassword = password.generator( req.params.myLength, req.params.options );
+        let checkPassword = password.checkPassword( myPassword );
+        res.status( 200 ).send( [ myPassword, checkPassword ] );
     }
-    let myPassword = password.generator( req.params.myLength, req.params.options );
-    let checkPassword = password.checkPassword( myPassword );
-    res.status( 200 ).send( [ myPassword, checkPassword ] );
 } );
 
 

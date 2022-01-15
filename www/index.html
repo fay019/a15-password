@@ -14,6 +14,7 @@
 <body>
 <div class="container">
     <h1 class="page-title">Password</h1>
+    <h2 class="page-title">Web pages</h2>
     <div class="btn-container">
         <button class="btn">Generator</button>
         <button class="btn">Checker</button>
@@ -21,7 +22,82 @@
     </div>
 </div>
 <div class="readme">
-    <iframe></iframe>
+    <h1 id="passwords">Passwords</h1>
+    <h2 id="api-documentation">API Documentation</h2>
+    <blockquote>
+        <p>password generator and strength checker</p>
+    </blockquote>
+    <p><img src="https://img.shields.io/badge/Code-JQuery-informational?style=flat&amp;logo=jquery&amp;color=61DAFB"
+            alt="f03c15">
+        <img src="https://img.shields.io/badge/Code-JavaScript-informational?style=flat&amp;logo=JavaScript&amp;color=F7DF1E"
+             alt="">
+        <img src="https://img.shields.io/badge/Code-HTML5-informational?style=flat&amp;logo=HTML5&amp;color=E34F26"
+             alt="">
+        <img src="https://img.shields.io/badge/Style-CSS3-informational?style=flat&amp;logo=CSS3&amp;color=1572B6"
+             alt="">
+        <br>
+        <img src="https://img.shields.io/badge/code-Node.js-informational?style=flat&amp;logo=node.js&amp;color=016013"
+             alt="">
+        <img src="https://img.shields.io/badge/framework-Express-informational?style=flat&amp;logo=express&amp;color=016013"
+             alt="">
+        <img src="https://img.shields.io/badge/code-NPM-informational?style=flat&amp;logo=npm&amp;color=820000" alt="">
+        <br>
+        <img src="https://img.shields.io/badge/Tools-Git-informational?style=flat&amp;logo=Git&amp;color=F05032" alt="">
+        <img src="https://img.shields.io/badge/Tools-GitHub-informational?style=flat&amp;logo=GitHub&amp;color=181717"
+             alt="">
+        <img src="https://img.shields.io/badge/Tools-GitLab-informational?style=flat&amp;logo=GitLab&amp;color=181717"
+             alt=""></p>
+    <h2 id="password-generator-api">password generator APi</h2>
+    <ul>
+        <li><p>Link &quot; URL: &#39;<a href="http://localhost:3000/api/generator/16/luns">http://localhost:3000/api/generator/{length}/{options}</a>&#39;
+            &quot; length=16 options='luns'</p>
+            <blockquote>
+                <blockquote>
+                    <ul>
+                        <li>Length: must be numeric, and it indicates the length of the password (min: 8, max: 40).</li>
+                        <li>Options: must be a string (which contains at least one of the letters indicated below), the
+                            order does not matter .
+                        </li>
+                        <li>L =&gt; Lowercase. &quot;abcdefghijklmnopqrstuvwxyzäöü&quot;</li>
+                        <li>U =&gt; Uppercase. &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ&quot;</li>
+                        <li>N =&gt; Numbers. &quot;0123456789&quot;</li>
+                        <li>S =&gt; Symbols. &quot;$%^&amp;(){}[]=+-/_.,;&gt;&lt;?!&#39;\&quot;@ß&quot;</li>
+                    </ul>
+                </blockquote>
+            </blockquote>
+        </li>
+        <li><p>RETURN: an array and the 1st value is a string and that is the generated password and the 2nd value is a
+            number that
+            tells us the strength of the generated password.</p>
+            <blockquote>
+                <ul>
+                    <li>string: the generated password.</li>
+                    <li>number: 1 =&gt; Very Weak, 2 =&gt; Weak, 3 =&gt; Medium, 4 =&gt; Strong, 5 =&gt; Very Strong.
+                    </li>
+                </ul>
+            </blockquote>
+        </li>
+    </ul>
+    <h2 id="password-checker-api">password checker APi</h2>
+    <ul>
+        <li><p>Link &quot;URL: &#39;<a href="http://localhost:3000/api/checker/{password}">http://localhost:3000/api/checker/{password}</a>&#39;
+            &quot;</p>
+            <blockquote>
+                <ul>
+                    <li>Password: string whatever you want</li>
+                </ul>
+            </blockquote>
+        </li>
+        <li><p>RETURN: a number that tells us the strength of the generated password.</p>
+            <blockquote>
+                <ul>
+                    <li>number: 1 =&gt; Very Weak, 2 =&gt; Weak, 3 =&gt; Medium, 4 =&gt; Strong, 5 =&gt; Very Strong.
+                    </li>
+                </ul>
+            </blockquote>
+        </li>
+    </ul>
+
 </div>
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/script.js"></script>

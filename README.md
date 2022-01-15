@@ -20,7 +20,7 @@
 
 ## password generator APi
 
-- Link " URL: 'http://localhost:3000/api/generateur/{length}/{options}' "
+- Link " URL: 'http://localhost:3000/api/generator/{length}/{options}' "
 
   > > - Length:  must be numeric, and it indicates the length of the password (min: 8, max: 40).
   >>- Options: must be a string (which contains at least one of the letters indicated below), the order does not matter .
