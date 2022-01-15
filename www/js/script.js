@@ -128,3 +128,30 @@ $copy.on( "click", () => {
     navigator.clipboard.writeText( $password.val() );
     $tempText.remove();
 } );
+
+///////////////// BACK HOME BTN /////////////////
+$('.btn-home').on('click', ()=>{
+    window.open(`./index.html`,"_self");
+})
+$('.btn').on('click',  (e)=>{
+    let link = $(e.target).text().toLowerCase();
+    window.open(`./${link}.html`,"_self");
+})
+
+////////////// REGISTER //////////////////
+
+$('.eye').on('click', (e)=>{
+    $(e.target).css('content', 'url("../icon/eye-slash.svg")');
+    console.log($(e.target).parent().children(":first"));
+    let $temp = $(e.target).parent().children(":first")
+    if ($temp.attr("type") === "password") {
+        $temp.attr("type", "text");
+        $(e.target).css('content', 'url("../icon/eye-slash.svg")');
+    } else {
+        $temp.attr("type", "password");
+        $(e.target).css('content', 'url("../icon/eye.svg")');
+    }
+})
+$('#password').on('keyup', (e)=> {
+    checker($(e.target).val());
+})

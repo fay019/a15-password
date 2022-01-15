@@ -3,8 +3,10 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-color: #f0f4f8;
+    /*background-color: #f0f4f8;*/
     font-family: Roboto, sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+    height: 100vh;
 }
 .container {
     width: 50%;
@@ -24,7 +26,13 @@ body {
 .check-form {
     background-color: white;
     padding: 15px;
-    margin: 3px;
+    margin: 1px;
+}
+.check-form:first-child {
+    border-radius: 10px 10px 0 0;
+}
+.check-form:last-child {
+    border-radius: 0 0 10px 10px;
 }
 .check-form label {
     margin-left: 10px;
@@ -48,6 +56,7 @@ body {
     margin: 50px 10px 10px;
     width: 45%;
     text-align: center;
+    border-radius: 10px;
 }
 .uppercase {
     text-transform: uppercase;
@@ -151,6 +160,35 @@ body {
     width: 80%;
     margin: 10px 0 30px 0;
 }
+.btn-home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: right;
+    cursor: pointer;
+    width: 70px;
+    height:20px;
+    font-size:0.8em;
+    border: 0 solid gray;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(66,66,66,.75);
+   /* background-image: url('../icon/house.svg');
+    background-repeat: no-repeat;
+    padding-left: 20px;  !* width of the image plus a little extra padding *!
+    display: block;  !* may not need this, but I've found I do *!*/
+}
+.btn-home:hover {
+    border: 0 ;
+    background-color: #60a2f7;
+    box-shadow: 1px 1px 5px 3px rgba(109, 173, 248, 0.71);
+}
+.btn-home:before {
+    position: absolute;
+    content: url('../icon/house.svg');
+    background:  no-repeat;
+    left: 4px;
+    top: 2px;
+}
 @media screen and (max-width: 1280px) {
     .container {
         width: 75%;
@@ -163,4 +201,104 @@ body {
     .generate-form {
         width: 100%;
     }
+}
+
+/*//////////////////////// REGISTER //////////////////// */
+html {
+    height: 100%;
+}
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    border-radius: 15px;
+}
+
+.login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 15px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 45px #03e9f4;
+}
+
+
+.eye {
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    content: url('../icon/eye.svg');
+    background: no-repeat;
+    filter: brightness(0) invert(1);;
 }
