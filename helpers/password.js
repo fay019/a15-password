@@ -87,7 +87,7 @@ let checkPassword = function ( password ) {
     if ( password.match( /[0-9]+/ ) ) {
         strength += 1;
     }
-    if ( password.match( /[\$%\^&\(\)\{\}\[\]=\+-/_\.,;><\?!'"@]+/ ) ) {
+    if ( password.match( /[\$%\^&\(\)\{\}\[\]=\+-/_\.,;><\?!'"@äöüÄÖÜ]+/ ) ) {
         strength += 1;
     }
     if ( password.length > 15 ) {
