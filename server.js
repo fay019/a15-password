@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 const password = require( './helpers/password' )
 
 const server = app.listen( PORT, () => {
-    console.log( 'Express-Server on: http://localhost: ' + PORT );
+    console.log( 'Express-Server on: http://localhost:' + PORT );
 } );
 
 app.use( express.static( 'www' ) );
