@@ -20,6 +20,7 @@ let generator = ( myLength, options ) => {
     // ask the server to generate password for us
     $.ajax( {
         url:`http://localhost:3000/api/generator/${myLength}/${options}`,
+        'content-type': 'application/json',
         success:function ( response ) {
             // if the string length is bigger than 31 we reduce the font size
             if ( response[ 0 ].length >= 31 ) {
@@ -45,6 +46,7 @@ let checker = ( password ) => {
     console.log( password )
     $.ajax( {
         url:`http://localhost:3000/api/checker/${password}`,
+        'content-type': 'application/json',
         success:function ( response ) {
             console.log( response )
             // use the switch function to draw progress bar // convert to number
