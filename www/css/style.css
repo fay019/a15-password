@@ -246,6 +246,13 @@ body {
         width: 100%;
     }
 }
+.hidden-alert {
+    background-color: #ffcccc;
+    display: none;
+    margin: 4px;
+    border-radius: 8px;
+    text-align: center;
+}
 
 /*//////////////////////// REGISTER //////////////////// */
 html {

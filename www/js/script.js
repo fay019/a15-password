@@ -18,24 +18,34 @@ $( '#span-symbols' ).html( '$ % ^ & ( ) { } [ ] = + - / _ . , ; & l t ; & g t ; 
  */
 let generator = ( myLength, options ) => {
     // ask the server to generate password for us
-    $.ajax( {
-        url:`http://localhost:3000/api/generator/${myLength}/${options}`,
-        'content-type': 'application/json',
-        success:function ( response ) {
-            // if the string length is bigger than 31 we reduce the font size
-            if ( response[ 0 ].length >= 31 ) {
-                let temp = ( ( response[ 0 ].length ) * -0.55 ) + 37;
-                temp = Math.round( temp * 100 ) / 100
-                $password.css( 'font-size', temp + 'px' );
-            } else {
-                $password.css( 'font-size', '24px' );
+    if (myLength > 40) {
+        document.getElementById("alertNum").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("alertNum").style.display = "none";
+        }, 3000); // 3000 millisecondes = 3 secondes
+        console.log("tros grands");
+    } 
+    else {
+        $.ajax( {
+            url:`http://localhost:3000/api/generator/${myLength}/${options}`,
+            'content-type': 'application/json',
+            'mode': 'no-cors',
+            success:function ( response ) {
+                // if the string length is bigger than 31 we reduce the font size
+                if ( response[ 0 ].length >= 31 ) {
+                    let temp = ( ( response[ 0 ].length ) * -0.55 ) + 37;
+                    temp = Math.round( temp * 100 ) / 100
+                    $password.css( 'font-size', temp + 'px' );
+                } else {
+                    $password.css( 'font-size', '24px' );
+                }
+                // write the password received in our div
+                $password.val( response[ 0 ] );
+                // use the switch function to draw progress bar // convert to number
+                mySwitch( response[ 1 ] )
             }
-            // write the password received in our div
-            $password.val( response[ 0 ] );
-            // use the switch function to draw progress bar // convert to number
-            mySwitch( response[ 1 ] )
-        }
-    } )
+        } )
+    }
 }
 
 /**
